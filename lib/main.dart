@@ -20,24 +20,42 @@ class MyApp extends StatelessWidget {
         useMaterial3: true,
       ),
       home: Scaffold(
-        backgroundColor: Colors.blue,
-        appBar: AppBar(title: Text("Your Heart")),
-        body: Center(
-          child: Container(
-              height: 300,
-              width: 300,
-              decoration: BoxDecoration(
-                  color: Colors.yellow,
-                  borderRadius: BorderRadius.circular(25)),
-              padding: EdgeInsets.all(25),
-              // child: Text("Anokh1"),
-              child: Icon(
-                Icons.favorite,
-                color: Colors.white,
-                size: 99,
-              )),
-        ),
-      ),
+          backgroundColor: Colors.blue,
+          appBar: AppBar(title: Text("Your Heart")),
+          // body: Center(
+          //   child: Container(
+          //       height: 300,
+          //       width: 300,
+          //       decoration: BoxDecoration(
+          //           color: Colors.yellow,
+          //           borderRadius: BorderRadius.circular(25)),
+          //       padding: EdgeInsets.all(25),
+          //       // child: Text("Anokh1"),
+          //       child: Icon(
+          //         Icons.favorite,
+          //         color: Colors.white,
+          //         size: 99,
+          //       )),
+          // ),
+          body: Column(
+            children: [
+              Container(
+                height: 200,
+                width: 200,
+                color: Colors.deepOrange,
+              ),
+              Container(
+                height: 200,
+                width: 200,
+                color: Colors.deepOrange[400],
+              ),
+              Container(
+                height: 200,
+                width: 200,
+                color: Colors.deepOrange[200],
+              ),
+            ],
+          )),
     );
   }
 }
