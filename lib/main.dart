@@ -13,14 +13,14 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      debugShowCheckedModeBanner: false,
-      title: 'Flutter Demo',
-      theme: ThemeData(
-        colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
-        useMaterial3: true,
-      ),
-      home: Scaffold(
-          backgroundColor: Colors.blue,
+        debugShowCheckedModeBanner: false,
+        title: 'Flutter Demo',
+        theme: ThemeData(
+          colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
+          useMaterial3: true,
+        ),
+        home: Scaffold(
+          backgroundColor: Colors.blue[100],
           appBar: AppBar(title: Text("Your Heart")),
           // body: Center(
           //   child: Container(
@@ -37,25 +37,35 @@ class MyApp extends StatelessWidget {
           //         size: 99,
           //       )),
           // ),
-          body: Column(
-            children: [
-              Container(
-                height: 200,
-                width: 200,
-                color: Colors.deepOrange,
-              ),
-              Container(
-                height: 200,
-                width: 200,
-                color: Colors.deepOrange[400],
-              ),
-              Container(
-                height: 200,
-                width: 200,
-                color: Colors.deepOrange[200],
-              ),
-            ],
-          )),
-    );
+
+          // body: ListView(
+          //   scrollDirection: Axis.horizontal,
+          //   children: [
+          //     Container(
+          //       height: 300,
+          //       width: 300,
+          //       color: Colors.deepOrange,
+          //     ),
+          //     Container(
+          //       height: 200,
+          //       width: 200,
+          //       color: Colors.deepOrange[400],
+          //     ),
+          //     Expanded(
+          //       child: Container(
+          //         color: Colors.deepOrange[200],
+          //       ),
+          //     ),
+          //   ],
+          // )),
+
+          body: ListView.builder(
+              itemCount: 10,
+              itemBuilder: (context, index) => ListTile(
+                    title: Text(index.toString()),
+                  )),
+
+          
+        ));
   }
 }
